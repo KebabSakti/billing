@@ -19,8 +19,7 @@ class CreateBillingsTable extends Migration
             $table->bigInteger('product_id');
             $table->boolean('is_demo')->default(1);
             $table->boolean('is_lifetime')->default(0);
-            $table->integer('duration')->nullable();
-            $table->integer('days_left')->nullable();
+            $table->integer('duration')->nullable()->default(30);
             $table->date('reorder_at')->nullable();
             $table->date('renew_at')->nullable();
             $table->timestamps();
